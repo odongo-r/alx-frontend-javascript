@@ -1,15 +1,13 @@
-/**
- * Returns an array with block-scoped variables
- * @param {boolean} trueOrFalse - Condition to determine variable values
- * @returns {boolean[]} Array with two boolean values
- */
 export default function taskBlock(trueOrFalse) {
-  let task = false;
-  let task2 = true;
+  const task = false;
+  const task2 = true;
 
   if (trueOrFalse) {
-    task = true;
-    task2 = false;
+    const task = true;
+    const task2 = false;
+    if (task && task2) {
+      return [task, task2];
+    }
   }
 
   return [task, task2];
