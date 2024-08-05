@@ -1,15 +1,20 @@
 /**
- * Returns an array with constant values based on the condition
- * @param {boolean} trueOrFalse - Condition to determine variable values
- * @returns {boolean[]} Array with two boolean values
+ * Evaluates a condition to return an array with boolean values based on the condition.
+ * @param {boolean} trueOrFalse - The condition to determine which values to return.
+ * @returns {boolean[]} An array containing two boolean values based on the condition.
  */
 export default function taskBlock(trueOrFalse) {
+  const task = false;
+  const task2 = true;
 
-  const defaultTask = false;
-  const defaultTask2 = true;
+  if (trueOrFalse) {
+    const task = true;
+    const task2 = false;
 
-  const conditionalTask = trueOrFalse ? true : defaultTask;
-  const conditionalTask2 = trueOrFalse ? false : defaultTask2;
+    if (task && task2) {
+      return [task, task2];
+    }
+  }
 
-  return [conditionalTask, conditionalTask2];
+  return [task, task2];
 }
