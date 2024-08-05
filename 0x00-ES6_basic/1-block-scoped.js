@@ -3,14 +3,16 @@
  * @param {boolean} trueOrFalse - Condition to determine variable values
  * @returns {boolean[]} Array with two boolean values
  */
+
 export default function taskBlock(trueOrFalse) {
-  let task = false;  // Block-scoped variable
-  let task2 = true;  // Block-scoped variable
+  let task = false;
+  let task2 = true;
 
   if (trueOrFalse) {
-    task = true;    // Updated within the block
-    task2 = false;  // Updated within the block
+    task = true;
+    task2 = false;
   }
 
-  return [task, task2];
+  return [task, task2];   
+
 }
