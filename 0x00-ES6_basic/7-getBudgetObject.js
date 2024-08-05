@@ -1,10 +1,16 @@
 /**
- * Creates a budget object.
- * @param {string} income - The income value.
- * @param {string} gdp - The GDP value.
- * @param {string} capita - The per capita value.
- * @returns {Object} The budget object.
+ * Creates a budget object with income, gdp, and capita properties
+ * @param {number} income - The income value
+ * @param {number} gdp - The GDP value
+ * @param {number} capita - The capita value
+ * @returns {object} Budget object with income, gdp, and capita
  */
 export default function getBudgetObject(income, gdp, capita) {
-  return { income, gdp, capita };
+  const budget = {
+    income,
+    gdp,
+    capita,
+  };
+
+  return budget;
 }

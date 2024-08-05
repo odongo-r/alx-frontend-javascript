@@ -1,31 +1,24 @@
 import getBudgetObject from './7-getBudgetObject.js';
 
 /**
- * Creates a full budget object with additional methods.
- * @param {string} income - The income value.
- * @param {string} gdp - The GDP value.
- * @param {string} capita - The per capita value.
- * @returns {Object} The full budget object.
+ * Creates a full budget object with methods for income formatting
+ * @param {number} income - The income value
+ * @param {number} gdp - The GDP value
+ * @param {number} capita - The capita value
+ * @returns {object} Full budget object with formatting methods
  */
 export default function getFullBudgetObject(income, gdp, capita) {
   const budget = getBudgetObject(income, gdp, capita);
-  return {
+  const fullBudget = {
     ...budget,
-    /**
-     * Returns the income in dollars.
-     * @param {string} income - The income value.
-     * @returns {string} The income in dollars.
-     */
     getIncomeInDollars(income) {
       return `$${income}`;
     },
-    /**
-     * Returns the income in euros.
-     * @param {string} income - The income value.
-     * @returns {string} The income in euros.
-     */
     getIncomeInEuros(income) {
       return `${income} euros`;
     },
   };
+
+  return fullBudget;
 }
+
