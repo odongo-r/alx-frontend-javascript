@@ -82,5 +82,4 @@ Create a Pull Request: Open a pull request to merge your changes into the main r
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Thank you for working on the ES6 Basics project! We hope this project helps you get comfortable with ES6 features and best practices.
 
